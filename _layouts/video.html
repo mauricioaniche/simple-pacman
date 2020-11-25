@@ -1,0 +1,63 @@
+---
+layout: default
+---
+<div class="container">
+	<div class="row">
+		<div class="col col-12">
+			
+			<div class="post__head wow fadeInUp">
+				<h1 class="post__title">Lecture {{page.number}}: {{ page.title | escape }}</h1>
+				<div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col col-12">
+			
+			<!-- begin post -->
+			<article class="post wow fadeInUp" data-wow-delay=".2s">
+	
+			{% if page.image and page.image != "" %}
+				<div class="post-image" style="background-image: url('{{ page.image | relative_url }}')"></div>
+			{% endif %}
+	
+				<div class="post__content">
+
+					<div>
+						{{ page.slug }}
+					</div>
+
+					<div style="margin-top: 2em;">
+						<h2>Watch the video</h2>
+
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/{{ page.youtube }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+
+					<div style="margin-top: 2em;">
+						<h2>What's next?</h2>
+						
+						{{ content }}
+					</div>
+
+					{{ if page.sourcecode }}
+					<div style="margin-top: 2em;">
+						<h2>Source code of the game up to this moment:</h2>
+						
+						<script src="https://gist.github.com/mauricioaniche/{{page.sourcecode}}.js"></script>
+
+					</div>
+					{{ endif }}
+
+
+					
+				</div>
+	
+			</article>
+			<!-- end post -->
+		</div>
+	</div>
+</div>

@@ -6,12 +6,19 @@ layout: default
 {% endif %}
 
 <div class="container">
+
 	<div class="row">
-		{% if site.posts.size > 0 %}
-			{% for post in paginator.posts %}
+		<p>Hi! Welcome to this series of videos on building a simple Pac-Man game in Python. This series of videos is perfect for students that just learned how to program in Python and are now ready to program something bigger than simple functions!</p> 
+
+		<p>Just follow the lectures below!</p>
+	</div>
+
+
+	<div class="row">
+		{% if site.videos.size > 0 %}
+			{% for video in site.videos %}
 				{% include article-content.html %}
 			{% endfor %}
 		{% endif %}
 	</div>
 </div>
-{% include pagination.html %}

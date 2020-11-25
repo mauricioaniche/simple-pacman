@@ -2,18 +2,9 @@
   <div class="row">
     <div class="col col-12">
       <!-- begin footer -->
-      {% if site.footer-image %}
-        <footer class="footer footer-image" style="background-image: url('{{site.footer-image | relative_url }}')">
-          {% include contact-link.html %}
-            <div class="copyright wow fadeInUp" data-wow-delay=".2s">{{site.time | date: '%Y'}} &copy; <a href="/" class="copyright__link">{% if site.title %}{{site.title}}{% else %}Reked Theme{% endif %}</a>. Crafted & Designed by <a href="https://artemsheludko.github.io" class="copyright__link">Artem Sheludko</a>.</div>
-        </footer>
-      {% else %}
         <footer class="footer">
-          {% include contact-link.html %}
-            <div class="copyright wow fadeInUp" data-wow-delay=".2s">{{site.time | date: '%Y'}} &copy; <a href="/" class="copyright__link">{% if site.title %}{{site.title}}{% else %}Reked Theme{% endif %}</a>. Crafted & Designed by <a
-              href="https://artemsheludko.github.io" class="copyright__link">Artem Sheludko</a>.</div>
+            <div class="copyright wow fadeInUp" data-wow-delay=".2s">{{site.time | date: '%Y'}} &copy; <a href="/" class="copyright__link">{{site.title}}. The content is licensed under Creative Commons. The Jekyll template is freely provided by <a href="https://artemsheludko.github.io" class="copyright__link">Artem Sheludko</a>.</div>
         </footer>
-      {% endif %}
       <!-- end footer -->
     </div>
   </div>
