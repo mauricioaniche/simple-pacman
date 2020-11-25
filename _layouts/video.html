@@ -43,14 +43,14 @@ layout: default
 						{{ content }}
 					</div>
 
-					{{ if page.sourcecode }}
+					{% if page.sourcecode %}
 					<div style="margin-top: 2em;">
 						<h2>Source code of the game up to this moment:</h2>
 						
 						<script src="https://gist.github.com/mauricioaniche/{{page.sourcecode}}.js"></script>
 
 					</div>
-					{{ endif }}
+					{% endif %}
 
 
 					
