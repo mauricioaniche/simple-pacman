@@ -16,7 +16,8 @@ layout: default
 
 	<div class="row">
 		{% if site.videos.size > 0 %}
-			{% for video in site.videos %}
+		{% assign sortedvideos = site.videos | sort: 'number' %}
+			{% for video in sortedvideos %}
 				{% include article-content.html %}
 			{% endfor %}
 		{% endif %}

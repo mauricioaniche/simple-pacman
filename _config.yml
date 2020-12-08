@@ -46,6 +46,5 @@ sass:
 
 collections:
   videos:
-    sort_by: number
     permalink: /:name
     output: true
